@@ -92,6 +92,12 @@ function Game() {
         }
     }, [score])
 
+    useEffect(()=>{
+        if(draws===5){
+            resetbutton()
+        }
+    },[draws])
+
     function resetbutton() {
         setplayerchoice(null)
         setcomputerchoice(null)

@@ -297,7 +297,13 @@
     box-shadow: 0 0 48px rgba(196,122,30,0.12);
 }
 
-.circle-icon { font-size: 64px; line-height: 1; }
+.circle-icon { 
+    width: 64px; 
+    height: 64px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
 
 .circle-pick {
     font-family: 'Space Mono', monospace;

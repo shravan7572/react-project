@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import '../App.css'
 
+
 const icons = {
     Rock: (
   <svg viewBox="0 0 64 64" width="64" height="64" fill="none">
@@ -70,6 +71,8 @@ function Game() {
         const result = getwinner(playerChoice, compChoice)
         setshowresult(result)
         sethistory(prev => [...prev, result])
+       
+   
     }
 
     useEffect(() => {
@@ -86,18 +89,24 @@ function Game() {
 
     useEffect(() => {
         if(score.player >= 5 || score.computer >= 5) {
-            
-          navigate('/gameover', { state: { score } })
+            if(score.player >= 5){
+                 const audio= new Audio("/sounds/win-game.mp3")
+                audio.play();
+            }else {
+                const audio = new Audio("/sounds/lose-game.mp3");
+                audio.play();
+            }
+        navigate('/gameover', { state: { score } })
            
-        }
-    }, [score])
+  }   
+}, [score])
 
     useEffect(()=>{
         if(draws===5){
             resetbutton()
         }
     },[draws])
-
+    
     function resetbutton() {
         setplayerchoice(null)
         setcomputerchoice(null)

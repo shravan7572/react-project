@@ -575,3 +575,169 @@
     transition: background 0.15s, color 0.15s;
 }
 .home-btn:hover { background: var(--faint); color: var(--text); }
+/* ───────── THEME TOGGLE ───────── */
+.theme-toggle {
+  position: fixed;
+  top: 14px;
+  right: 16px;
+  z-index: 99999;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* ───────── DARK MODE VARIABLES ───────── */
+.dark {
+  --bg: #613F2E;
+  --surface: #613F2E;
+  --border: rgba(196,113,58,0.18);
+  --text: #f0d9b5;
+  --muted: rgba(240,217,181,0.45);
+  --faint: rgba(196,113,58,0.08);
+  --accent: #d4845a;
+}
+
+.light {
+  --bg: #FDF6EC;
+  --surface: #F0D9B5;
+  --border: rgba(139,74,42,0.12);
+  --text: #2C1208;
+  --muted: rgba(44,18,8,0.4);
+  --faint: rgba(139,74,42,0.07);
+  --accent: #C4713A;
+}
+
+/* pages */
+.dark .welcome-page,
+.dark .page,
+.dark .gameover-page {
+  background-color: #613F2E;
+  background-image:
+    linear-gradient(rgba(196,113,58,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196,113,58,0.06) 1px, transparent 1px);
+}
+
+/* topbar + footer */
+.dark .topbar,
+.dark .footer-row {
+  background: #613F2E;
+  border-color: rgba(196,113,58,0.18);
+}
+
+/* marquee bar */
+.dark .marquee-bar {
+  background: #261508;
+  border-color: rgba(196,113,58,0.18);
+}
+
+.dark .marquee-item {
+  color: rgba(240,217,181,0.3);
+}
+
+/* welcome title */
+.dark .welcome-title {
+  color: #f0d9b5;
+}
+
+.dark .welcome-title .accent-line {
+  -webkit-text-stroke: 1px rgba(240,217,181,0.25);
+}
+
+/* welcome eyebrow */
+.dark .welcome-eyebrow {
+  color: #d4845a;
+  border-color: rgba(196,113,58,0.35);
+}
+
+/* play button */
+.dark .welcome-play-btn {
+  background: #f0d9b5;
+  color: #1a0f0a;
+}
+
+/* score pills */
+.dark .sc-pill {
+  background: #2a1a12;
+  color: #d4845a;
+  border-color: rgba(196,113,58,0.2);
+}
+
+.dark .sc-pill span {
+  color: #f0d9b5;
+}
+
+/* circles */
+.dark .circle {
+  background: #2a1a12;
+  border-color: rgba(196,113,58,0.2);
+}
+
+/* choice buttons */
+.dark .cbtn {
+  background: #2a1a12;
+  border-color: rgba(196,113,58,0.18);
+}
+
+.dark .cbtn:hover {
+  background: #3a2318;
+  border-color: rgba(196,113,58,0.4);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.dark .cbtn-label {
+  color: #d4845a;
+}
+
+/* go home button */
+.dark .go-home {
+  color: #d4845a;
+}
+
+/* reset button */
+.dark .reset-btn {
+  color: rgba(240,217,181,0.45);
+  border-color: rgba(196,113,58,0.18);
+}
+
+.dark .reset-btn:hover {
+  background: rgba(196,113,58,0.08);
+  color: #f0d9b5;
+}
+
+/* stats */
+.dark .stats {
+  color: rgba(240,217,181,0.45);
+}
+
+.dark .stats span {
+  color: #d4845a;
+}
+
+/* badge idle */
+.dark .badge-idle {
+  background: rgba(196,113,58,0.08);
+  color: rgba(240,217,181,0.45);
+  border-color: rgba(196,113,58,0.18);
+}
+
+/* gameover */
+.dark .gameover-title,
+.dark .final-score {
+  color: #f0d9b5;
+}
+
+.dark .start-btn {
+  background: #f0d9b5;
+  color: #1a0f0a;
+}
+
+.dark .home-btn {
+  border-color: rgba(196,113,58,0.25);
+  color: rgba(240,217,181,0.45);
+}
+
+.dark .home-btn:hover {
+  background: rgba(196,113,58,0.08);
+  color: #f0d9b5;
+}
